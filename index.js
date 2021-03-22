@@ -16,6 +16,15 @@ app.get('/random', (req, res) => {
     res.render('random', { num });
 });
 
+app.get('/lieutenants', (req, res) => {
+    const lieutenants = [
+        'Daisaku Kuze',
+        'Hiroki Awano',
+        'Keiji Shibusawa'
+    ];
+    res.render('lieutenants', { lieutenants });
+});
+
 app.get('/r/:subreddit', (req, res) => {
     const {subreddit} = req.params;
     res.render('subreddit', { subreddit });
